@@ -61,6 +61,7 @@ export function initHandlePokemonData() {
     Element.textContent = " ";
     Element.style.backgroundColor = `transparent`;
     Element.style.color = `none`;
+   
   });
 
     hpText.textContent = "HP";
@@ -274,6 +275,7 @@ async function showPokemonData(pokemon) {
                 currentWeaknessElement.textContent = "";
                 currentWeaknessElement.style.backgroundColor = `transparent`;
                 currentWeaknessElement.style.color = "none";
+                currentWeaknessElement.style.display = "none";
               }
             });
           }

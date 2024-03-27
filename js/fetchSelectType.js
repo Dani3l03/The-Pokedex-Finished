@@ -60,6 +60,7 @@ export default function selectTypePokemon() {
     Element.textContent = "";
     Element.style.backgroundColor = `transparent`;
     Element.style.color = `none`;
+    
   });
 
     hpText.textContent = "HP";

@@ -247,6 +247,7 @@ export default function fetchAllPokemon() {
                 currentWeaknessElement.textContent = "";
                 currentWeaknessElement.style.backgroundColor = `transparent`;
                 currentWeaknessElement.style.color = "none";
+                currentWeaknessElement.style.display = "none";
               }
             });
           }

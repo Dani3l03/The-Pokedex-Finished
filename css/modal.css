@@ -153,6 +153,7 @@
 }
 
 #weak-one {
+  display: flex;
   font-weight: 800;
   color: transparent;
   background-color: none;
@@ -161,6 +162,7 @@
 }
 
 #weak-two {
+  display: flex;
   font-weight: 800;
   color: transparent;
   background-color: none;
@@ -169,6 +171,7 @@
 }
 
 #weak-three {
+  display: flex;
   font-weight: 800;
   color: transparent;
   background-color: none;
@@ -177,6 +180,7 @@
 }
 
 #weak-four {
+  display: flex;
   font-weight: 800;
   color: transparent;
   background-color: none;
@@ -185,6 +189,7 @@
 }
 
 #weak-five {
+  display: flex;
   font-weight: 800;
   color: transparent;
   background-color: none;
