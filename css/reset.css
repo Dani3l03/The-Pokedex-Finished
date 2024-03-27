@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  font-size: 65%;
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.background-container {
+  background-image: url("../img/assets/bg-red.svg");
+  background-position: center;
+  background-size: cover;
+  height: 92rem;
+  background-repeat: no-repeat;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(239, 243, 246, 1);
+}
+
+.hide {
+  display: none;
+}
+
+.ativo {
+  opacity: 100%;
+  color: rgba(62, 117, 195, 1);
+}
+
+.blueBack {
+  background-image: url("../img/assets/bg-blue.svg");
+  background-position: center;
+  background-size: cover;
+  height: 92rem;
+  background-repeat: no-repeat;
+}
+
+:root {
+  --type-bug: rgba(155, 186, 72, 0.3);
+  --type-dark: rgba(89, 87, 97, 0.3);
+  --type-dragon: rgba(44, 106, 193, 0.3);
+  --type-electric: rgba(212, 188, 52, 0.3);
+  --type-fairy: rgba(226, 150, 225, 0.3);
+  --type-fighting: rgba(196, 77, 97, 0.3);
+  --type-ground: rgba(206, 128, 86, 0.3);
+  --type-ice: rgba(113, 186, 172, 0.3);
+  --type-normal: rgba(144, 144, 144, 0.3);
+  --type-poison: rgba(172, 106, 202, 0.3);
+  --type-psychic: rgba(235, 139, 133, 0.3);
+  --type-rock: rgba(132, 190, 179, 0.3);
+  --type-ghost: rgba(134, 97, 183, 0.3);
+  --type-grass: rgba(115, 184, 97, 0.25);
+  --type-steel: rgba(101, 148, 161, 0.25);
+  --type-water: rgba(79, 119, 190, 0.25);
+  --type-fire: rgba(233, 99, 3, 0.25);
+  --type-flying: rgba(117, 140, 189, 0.3);
+  --blue-primary: rgba(63, 93, 179, 0.3);
+}
+
+:root {
+  --type-bug-name: #9bbb48;
+  --type-dark-name: #595761;
+  --type-dragon-name: #2c6ac1;
+  --type-electric-name: #d4bc34;
+  --type-fairy-name: #e296e1;
+  --type-fighting-name: #c44d61;
+  --type-ground-name: #ce8056;
+  --type-ice-name: #71bac4;
+  --type-normal-name: #909090;
+  --type-poison-name: #ac6aca;
+  --type-psychic-name: #eb8b85;
+  --type-rock-name: #84beb3;
+  --type-ghost-name: #8661b7;
+  --type-grass-name: #73b861;
+  --type-steel-name: #6594a1;
+  --type-water-name: #4f77be;
+  --type-fire-name: #e96303;
+  --type-flying-name: #758cbd;
+  --blue-primary-name: #3f5db3;
+}

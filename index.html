@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/assets/game.png">
+    <meta name="description" content="pokédex - pokémon enciclopédia">
+    <title>Pokédex</title>
+</head>
+
+<body>
+    <div class="background-container">
+        <div class="background-swiper">
+            <nav id="nav-container">
+                <div class="poke-logo">
+                    <a><img id="logo" src="img/assets/logo.svg"></a>
+                </div>
+
+                <div class="btn-logo">
+
+                    <div class="dropdown-menu-nav">
+                        <div class="menu-button">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="dropdown-menu-nav-content">
+                            <div class="content-nav">
+
+                                <div class="FIGMA"><a href="https://www.figma.com/file/VrTZqONlwpd8jUBHp8LIHh/Pok%C3%A9mon---Codeboost?type=design&node-id=0-1&mode=design&t=1WcW9GuffI0Nku7q-0" target="_blank"><img src="img/assets/icon-pokeball.svg" alt="">
+                                        <p>Figma Project</p>
+                                    </a></div>
+
+                                <div class="DEV"><a href="https://github.com/Dani3l03" target="_blank"><img src="img/assets/icon-pokeball.svg" alt="">
+                                        <p>Developer</p>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            <header id="header-container">
+                <a>
+                    <div id="bag-detail">
+                        <div class="bag-img"><img src="img/assets/bag-red.svg"></div>
+                        <div>
+                            <p class="bag-text">pokédex</p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="poke-text">
+                    <h1 class="title">Who is that Pokémon?</h1>
+                    <p class="text">The perfect guide for those who want to hunt Pokémons around the world</p>
+                </div>
+                <div id="pokeball-buttons">
+                    <div class="explore-button" id="exploreButton" onclick="scrollToSection('exploreButton')">
+                        <div>
+                            <p class="explore">explore</p>
+                        </div>
+                        <div class="arrow-down"><img src="img/assets/arrow-down-white.svg"></div>
+                    </div>
+                    <div id="pokeball-container">
+                        <div id="lighting-positon">
+                            <img src="img/assets/lighting.svg" alt="">
+                        </div>
+                        <div id="pokeball-position" class="pokeball">
+                            <img class="pokeball-img" src=" " alt="">
+                        </div>
+                    </div>
+                    <div id="radio-buttons">
+                        <div type="radio" class="red button-style"></div>
+                        <div type="radio" class="blue button-style"></div>
+                    </div>
+                </div>
+        </div>
+        </header>
+    </div>
+
+    <section id="body-select-container">
+        <div class="select-title">
+            <h2 class="select-pokemon">Select your <br> Pokémon</h2>
+        </div>
+
+        <div class="search-bar">
+            <div>
+                <input type="text" placeholder="Search a pokemon..." id="inputPokemon" name="pokebtn">
+                <button name="pokebtn" id="btn-pokemon"><i><img src="img/assets/icon-search.svg"></i></button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="pokemon-container" id="pokemon-container-responsive">
+        <div id="pokemon-types">
+            <div class="dropdown">
+                <button class="dropbtn hide">Select Type</button>
+                <div class="dropdown-content">
+
+                    <div class="types" id="pokemon">
+                        <img src="img/assets/icon-all.svg">
+                        <p>All</p>
+                    </div>
+                    <div class="types" id="ghost">
+                        <img src="img/assets/icon-types/ghost.svg">
+                        <p>Ghost</p>
+                    </div>
+                    <div class="types" id="ground">
+                        <img src="img/assets/icon-types/ground.svg">
+                        <p>Stone</p>
+                    </div>
+                    <div class="types" id="grass">
+                        <img src="img/assets/icon-types/grass.svg">
+                        <p>Plants</p>
+                    </div>
+                    <div class="types" id="dragon">
+                        <img src="img/assets/icon-types/dragon.svg">
+                        <p>Dragon</p>
+                    </div>
+                    <div class="types" id="steel">
+                        <img src="img/assets/icon-types/steel.svg">
+                        <p>Metal</p>
+                    </div>
+                    <div class="types" id="electric">
+                        <img src="img/assets/icon-types/electric.svg">
+                        <p>Shock</p>
+                    </div>
+                    <div class="types" id="water">
+                        <img src="img/assets/icon-types/water.svg">
+                        <p>Water</p>
+                    </div>
+                    <div class="types" id="fire">
+                        <img src="img/assets/icon-types/fire.svg">
+                        <p>Fire</p>
+                    </div>
+                    <div class="types" id="bug">
+                        <img src="img/assets/icon-types/bug.svg">
+                        <p>Insect</p>
+                    </div>
+                    <div class="types" id="flying">
+                        <img src="img/assets/icon-types/flying.svg">
+                        <p>Flying</p>
+                    </div>
+                    <div class="types" id="dark">
+                        <img src="img/assets/icon-types/dark.svg">
+                        <p>Dark</p>
+                    </div>
+                    <div class="types" id="fighting">
+                        <img src="img/assets/icon-types/fighting.svg">
+                        <p>Fighter</p>
+                    </div>
+                    <div class="types" id="psychic">
+                        <img src="img/assets/icon-types/psychic.svg">
+                        <p>Psychic</p>
+                    </div>
+                    <div class="types" id="fairy">
+                        <img src="img/assets/icon-types/fairy.svg">
+                        <p>Fairy</p>
+                    </div>
+                    <div class="types" id="ice">
+                        <img src="img/assets/icon-types/ice.svg">
+                        <p>Ice</p>
+                    </div>
+                    <div class="types" id="poison">
+                        <img src="img/assets/icon-types/poison.svg">
+                        <p>Poison</p>
+                    </div>
+                    <div class="types" id="normal">
+                        <img src="img/assets/icon-types/normal.svg">
+                        <p>Normal</p>
+                    </div>
+                    <div class="types" id="rock">
+                        <img src="img/assets/icon-types/rock.svg">
+                        <p>Rock</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="search-results-container">
+            <div id="search-pokemon-results">
+                <img src="img/assets/icon-pokeball.svg">
+                <p class="search-numbers"></p>
+            </div>
+            <div id="results">
+                <div class="error-msg hide">Não foi possível encontrar o Pokémon</div>
+            </div>
+            <div class="pokemon-container-results" id="pokemon-container-results-responsive">
+
+            </div>
+
+            <div class="button-load">
+                <button class="load-pokemon" id="load-pokemon-responsive">Load More Pokémon</button>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <div class="modal-fade">
+        <article class="container-modal-show">
+            <div class="button-close"><button><img src="img/assets/close.svg" alt=""></button></div>
+            <div class="modal-container">
+                <div class="modal">
+                    <div class="modal-img">
+                        <div class="modal-type"><img src=""></div>
+                        <div class="modal-img-back"><img src=""></div>
+                    </div>
+                    <div class="modal-info">
+                        <div class="modal-name">
+                            <h3>Bulbasaur</h3>
+                            <p>#001</p>
+                        </div>
+                        <div class="modal-types">
+                            <p id="type-one">Grass</p>
+                            <p id="type-two">Poison</p>
+                        </div>
+
+                        <div class="modal-caracter">
+                            <div class="modal-poke-height">
+                                <h4>Height</h4>
+                                <p id="height">0.7m</p>
+                            </div>
+                            <div class="modal-poke-weight">
+                                <h4>Weight</h4>
+                                <p id="weight">6.9kg</p>
+                            </div>
+                            <div class="modal-poke-abilities">
+                                <h4>Abilities</h4>
+                                <p id="abilitie">Overgrow</p>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-weak">
+                            <p>Weaknesses</p>
+                            <ul class="modal-weak-list">
+                                <li id="weak-one"></li>
+                                <li id="weak-two"></li>
+                                <li id="weak-three"></li>
+                                <li id="weak-four"></li>
+                                <li id="weak-five"></li>
+                            </ul>
+                        </div>
+
+                        <div class="modal-stats">
+                            <h4>Stats</h4>
+                            <div class="stats-show">
+                                <p id="hp-text">HP</p>
+                                <ul class="bars" id="HP">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+
+                                </ul>
+                                <p id="attk-text">Attack</p>
+                                <ul class="bars" id="attack">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+
+                                </ul>
+                                <p id="def-text">Defense</p>
+                                <ul class="bars" id="defense">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+
+                                </ul>
+                                <p id="spa-text">Sp.Attack</p>
+                                <ul class="bars" id="spAttack">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+
+                                </ul>
+                                <p id="spd-text">Sp.Defense</p>
+                                <ul class="bars" id="spDefense">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+
+                                </ul>
+                                <p id="speed-text">Speed</p>
+                                <ul class="bars" id="speed">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </article>
+    </div>
+    <footer class="footer-container">
+        <div class="name">
+            <h3></h3>
+            <img src="img/assets/codeboost.svg" alt="">
+        </div>
+        <div class="contact">
+            <p class="modulo">Módulo JavaScript</p>
+            <p>Consumindo e exibindo dados de uma API</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./js/script.js" defer></script>
+</body>
+
+</html>
