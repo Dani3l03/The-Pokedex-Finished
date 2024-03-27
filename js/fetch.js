@@ -25,7 +25,7 @@ export function initHandlePokemonData() {
   }
 
   function handleSendForm() {
-    const pokemon = inputName.value;
+    const pokemon = inputName.value.toLowerCase();
     showPokemonData(pokemon);
     pokemonButtonLoad.style.display = "none";
     const allCards = document.querySelectorAll(".pokemon-container-result");
@@ -57,12 +57,11 @@ export function initHandlePokemonData() {
       document.getElementById("weak-five"),
     ];
 
-    weakElements.forEach(Element => {
-    Element.textContent = " ";
-    Element.style.backgroundColor = `transparent`;
-    Element.style.color = `none`;
-   
-  });
+    weakElements.forEach((Element) => {
+      Element.textContent = " ";
+      Element.style.backgroundColor = `transparent`;
+      Element.style.color = `none`;
+    });
 
     hpText.textContent = "HP";
     hpText.style.color = "rgba(122, 125, 128, 1)";
@@ -89,7 +88,7 @@ export function initHandlePokemonData() {
     speedText.style.fontWeight = "400";
   }
 
-async function showPokemonData(pokemon) {
+  async function showPokemonData(pokemon) {
     const data = await getPokemonData(pokemon);
     const pokemonNameSearched = data.name;
     const pokemonNumberSearched = data.id;
@@ -99,7 +98,7 @@ async function showPokemonData(pokemon) {
 
     createCard(data);
 
-   function createCard() {
+    function createCard() {
       const pokemonContainer = document.querySelector(
         ".pokemon-container-results"
       );
@@ -154,14 +153,14 @@ async function showPokemonData(pokemon) {
 
             modalTypeTwo.style.backgroundColor = `var(--type-${data.types[1].type.name})`;
             modalTypeTwo.style.color = `var(--type-${data.types[1].type.name}-name)`;
-            modalTypeTwo.style.display = "block"
+            modalTypeTwo.style.display = "block";
           } else {
             modalTypeTwo.textContent = "";
             modalTypeTwo.style.background = "none";
-            modalTypeTwo.style.display = "none"
+            modalTypeTwo.style.display = "none";
           }
           modalContainerImg.style.backgroundImage = `url('./img/assets/bg-types/${data.types[0].type.name}.svg')`;
-          
+
           modalHeight.textContent = `${data.height / 10} m`;
           modalWeight.textContent = `${data.weight / 10} kg`;
           modalAbilitie.textContent =
@@ -188,43 +187,37 @@ async function showPokemonData(pokemon) {
             const spaText = document.getElementById("spa-text");
             const spdText = document.getElementById("spd-text");
             const speedText = document.getElementById("speed-text");
-          
+
             hpText.addEventListener("mouseover", function () {
-                hpText.textContent = `HP: ${pokemonStats.HP}`;
-                hpText.style.color = "red";
-                hpText.style.fontWeight = "800";
-              
+              hpText.textContent = `HP: ${pokemonStats.HP}`;
+              hpText.style.color = "red";
+              hpText.style.fontWeight = "800";
             });
 
             attkText.addEventListener("mouseover", function () {
-                attkText.textContent = `Attack: ${pokemonStats.attack}`;
-                attkText.style.color = "red";
-                attkText.style.fontWeight = "800";
-              
+              attkText.textContent = `Attack: ${pokemonStats.attack}`;
+              attkText.style.color = "red";
+              attkText.style.fontWeight = "800";
             });
             defText.addEventListener("mouseover", function () {
-                defText.textContent = `Defense: ${pokemonStats.defense}`;
-                defText.style.color = "red";
-                defText.style.fontWeight = "800";
-              
+              defText.textContent = `Defense: ${pokemonStats.defense}`;
+              defText.style.color = "red";
+              defText.style.fontWeight = "800";
             });
             spaText.addEventListener("mouseover", function () {
-                spaText.textContent = `Sp.Attack: ${pokemonStats.spAttack}`;
-                spaText.style.color = "red";
-                spaText.style.fontWeight = "800";
-              
+              spaText.textContent = `Sp.Attack: ${pokemonStats.spAttack}`;
+              spaText.style.color = "red";
+              spaText.style.fontWeight = "800";
             });
             spdText.addEventListener("mouseover", function () {
-                spdText.textContent = `Sp.Defense: ${pokemonStats.spDefense}`;
-                spdText.style.color = "red";
-                spdText.style.fontWeight = "800";
-              
+              spdText.textContent = `Sp.Defense: ${pokemonStats.spDefense}`;
+              spdText.style.color = "red";
+              spdText.style.fontWeight = "800";
             });
             speedText.addEventListener("mouseover", function () {
-                speedText.textContent = `Speed: ${pokemonStats.speed}`;
-                speedText.style.color = "red";
-                speedText.style.fontWeight = "800";
-              
+              speedText.textContent = `Speed: ${pokemonStats.speed}`;
+              speedText.style.color = "red";
+              speedText.style.fontWeight = "800";
             });
 
             for (const stat in stats) {
@@ -251,7 +244,7 @@ async function showPokemonData(pokemon) {
 
             console.log(`Dados do tipo ${type}:`, dataType);
             const pokemonWeaknesses =
-            dataType.damage_relations.double_damage_from;
+              dataType.damage_relations.double_damage_from;
             const usedWeaknesses = [];
 
             const weakElements = [
@@ -372,9 +365,9 @@ async function showPokemonData(pokemon) {
             case "dragon":
               typeImage.src = "img/assets/icon-types/dragon.svg";
               break;
-              case "dark":
-                typeImage.src= "img/assets/icon-types/dark.svg";
-                break;
+            case "dark":
+              typeImage.src = "img/assets/icon-types/dark.svg";
+              break;
           }
         });
       }
@@ -451,9 +444,9 @@ async function showPokemonData(pokemon) {
               imageDiv.style.backgroundColor = `var(--type-${pokemonTypeSearched[0]})`;
               break;
             case "dark":
-                typeImage.src= "img/assets/icon-types/dark.svg";
-                imageDiv.style.backgroundColor = `var(--type-${pokemonTypeSearched[0]})`;
-                break;
+              typeImage.src = "img/assets/icon-types/dark.svg";
+              imageDiv.style.backgroundColor = `var(--type-${pokemonTypeSearched[0]})`;
+              break;
           }
         });
       }
