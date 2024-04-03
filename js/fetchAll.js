@@ -35,6 +35,7 @@ export default function fetchAllPokemon() {
     Element.textContent = "";
     Element.style.backgroundColor = `transparent`;
     Element.style.color = `none`;
+    Element.style.display = 'none'
   });
 
     hpText.textContent = "HP";
@@ -240,6 +241,7 @@ export default function fetchAllPokemon() {
                 currentWeaknessElement.textContent =
                   weakness.name.charAt(0).toUpperCase() +
                   weakness.name.slice(1);
+                  currentWeaknessElement.style.display = 'block'
                 currentWeaknessElement.style.backgroundColor = `var(--type-${weakness.name})`;
                 currentWeaknessElement.style.color = `var(--type-${weakness.name}-name)`;
                 usedWeaknesses.push(weakness.name);

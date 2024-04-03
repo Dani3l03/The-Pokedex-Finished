@@ -40,8 +40,6 @@ swiper.addEventListener("click", changePokemon);
 
 setInterval(changePokemon, 12000);
 
-
-
 const pokemonTypesClick = document.querySelectorAll(".types");
 
 pokemonTypesClick.forEach(function (type) {

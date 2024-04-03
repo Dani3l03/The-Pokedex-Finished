@@ -1,10 +1,6 @@
 export function initHandlePokemonData() {
   const inputName = document.querySelector("#inputPokemon");
   const pokeBtn = document.querySelector("#btn-pokemon");
-  const pokemonImage = document.querySelector(".image-poke");
-  const pokemonName = document.querySelector(".poke-name");
-  const pokemonType = document.querySelector(".type");
-  const pokemonContainer = document.querySelector(".pokemon-container-results");
   const pokemonButtonLoad = document.querySelector(".button-load");
   const pokemonErrorMsg = document.querySelector(".error-msg");
   const results = document.querySelector(".search-numbers");
@@ -61,6 +57,7 @@ export function initHandlePokemonData() {
       Element.textContent = " ";
       Element.style.backgroundColor = `transparent`;
       Element.style.color = `none`;
+      Element.style.display = 'none'
     });
 
     hpText.textContent = "HP";
@@ -241,10 +238,7 @@ export function initHandlePokemonData() {
             const pokeApiType = `https://pokeapi.co/api/v2/type/${type}`;
             const result = await fetch(pokeApiType);
             const dataType = await result.json();
-
-            console.log(`Dados do tipo ${type}:`, dataType);
-            const pokemonWeaknesses =
-              dataType.damage_relations.double_damage_from;
+            const pokemonWeaknesses = dataType.damage_relations.double_damage_from;
             const usedWeaknesses = [];
 
             const weakElements = [
@@ -257,10 +251,10 @@ export function initHandlePokemonData() {
 
             pokemonWeaknesses.forEach((weakness, index) => {
               if (!usedWeaknesses.includes(weakness.name)) {
+                console.log(weakness)
                 const currentWeaknessElement = weakElements[index];
-                currentWeaknessElement.textContent =
-                  weakness.name.charAt(0).toUpperCase() +
-                  weakness.name.slice(1);
+                currentWeaknessElement.textContent = weakness.name.charAt(0).toUpperCase() + weakness.name.slice(1);
+                currentWeaknessElement.style.display = 'block'
                 currentWeaknessElement.style.backgroundColor = `var(--type-${weakness.name})`;
                 currentWeaknessElement.style.color = `var(--type-${weakness.name}-name)`;
                 usedWeaknesses.push(weakness.name);
